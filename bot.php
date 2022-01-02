@@ -29,6 +29,9 @@ $bot->cmd('*', function ($query) {
 
     $ok = (new Laporkan($query))->keChannel();
 
+    $find = array("َ","ِ","ُ","ً","ٍ","ٌ","ْ","ّ");
+    $query = str_replace($find,"",$query); //bersihkan harokat
+
     $query = urlencode(iconv("utf-8", "windows-1256", $query));
     $category = 5;
 
