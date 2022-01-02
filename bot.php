@@ -1,7 +1,4 @@
 <?php
-require __DIR__ . '/dom/simple_html_dom.php';
-require __DIR__ . '/botdaftar/vendor/radyakaze/phptelebot/src/PHPTelebot.php';
-
 foreach (glob(__DIR__ . '/Danns/*.php') as $file) {
     require $file;
 }
